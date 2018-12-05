@@ -8,7 +8,7 @@
     <script>
     
     function computerPlay() {
-        let choices = "Rock Paper Scissors";
+        let choices = "rock paper scissors";
         let choicearray = choices.split(" ");
         let computerchoice = choicearray[Math.floor(Math.random() * choicearray.length)];
         console.log(computerchoice);
@@ -19,39 +19,22 @@
 
     let userChoice = prompt("Choose Rock, Paper or Scissors!");
 
-    function capitalize() {
-            let lowerword = userChoice.toLowerCase();
-            let first = userChoice.charAt(0);
-            let finalWord = lowerword.replace(first, first.toUpperCase());
-            console.log(finalWord);
-             }
-        let finalWord = capitalize();
+    let userWord = userChoice.toLowerCase();
 
-if (finalWord != "Rock"||"Paper"||"Scissors") {
-    console.log("I'm sorry I don't understand, please try again")
-    userChoice = prompt("Chose Rock, Paper or Scissors!");
-}
-else if (finalWord == "Rock" && computerChoice == "Rock") {
-    console.log("Draw! Rock smashes Rock, but no-one wins!")
-}
-else if (finalWord == "Rock" && computerChoice == "Paper") {
-    console.log("You lose! Rock is smothered by papery goodness!")
-}
-else if (finalWord == "Rock" && computerChoice == "Scissors") {
-    console.log("You Win! Your badass rock blunts those nasty scissors!")
-}
-else if (finalWord == "Paper" && computerChoice == "Paper") {
-    console.log("Draw! Both of your papers are as ineffective as the other!")
-}
-else if (finalWord == "Paper" && computerChoice == "Scissors") {
-    console.log("You lose! Scissors cuts you to ribbons!")
-}
-else if (finalWord == "Scissors" && computerChoice == "Scissors") {
-    console.log("Draw! Both of you scissor like mad lesbos!")
-}
-else {
-    console.log("I'm sorry, something has gone dreadfully wrong.")
-}
+    if (computerChoice == userChoice){
+        console.log("Draw!");
+    }
+    else if ((computerChoice = "rock") && (userChoice = "paper")){
+        console.log("Win! Paper covers rock.");
+    }
+    else if ((computerChoice = "rock") && (userChoice = "scissors")){
+        console.log("lose! Scissors blunted by rock.");
+    }
+    else {
+        console.log("error");
+    }
+
+
 
 
     </script>
